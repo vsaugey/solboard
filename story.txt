@@ -1,0 +1,40 @@
+Who have a chance, one day, to rework on a project that he have started 25 year ago !!!
+
+During the COVID19 lockdown, I took time to sort the files on my NAS (kind of things you never do in usual situation) and I discover the source of my second year of university project.
+
+I'm remember that this project occupied a great part of my mind for about half of the year 1996 (yes, it was previous century).
+How to find a solution to the problem was an obsession and to be honest probably on of my first failure in coding.
+
+The professor in charge of language C initiation course proposed few subjects of project and I was very happy to got the one relating to Solitaire.
+The purpose was to code a small program that could play and follow some instructions like keep the pawn in the middle of the board to not lose too fast.
+It was interresting way to introduce coding in C language, I still thinking that was a very good subject but a little bit complex for introcution in coding.
+And, I don't know exactly when I changing myself the subject to programing a game that will prevent you when you cannot win anymore.
+This will need to computated all the possible winning board and complexify a lot the subject...
+
+After many tries, I had found an efficient way to store the board positions and test the moves.
+I was convinced that the solution was close !
+But the main problem still revolved around the low memory capacity of the computer 25 years ago.
+I'm remembering that I had coded soo many different collection design patterns without find a efficient one for my problem.
+
+It was a bit frustrating for me at this time. I remember me, spending many evening in the lab of the university.
+I was enjoying few appetie of my fellow for computer science that was permitted me to use 10 computers in parralal trying to achieve computation of the problem.
+Everytime, it was a complete failure, but it is still great memory for me ... university have few computers and it was not permitted to open session on different computer.
+I was afraid to meet a teacher or one of the students in charge of the computer room would report me.
+
+Anyway, when I'm reading this code today, I'm realizing that the code quality was very poor (I really like too much global vatiable and have a very usage of the recurrency) with few very few commentaries.
+But, some of the idea behind the code like the coding og the board or the management of the symetry was very exacting.
+
+It's why I spent few hours to code a very simple storage of the board using flags table of bit just for fun (One of the idea that I got but that was impossible implement).
+When I started the generation algorithm to compute winning table and the prog print me computation finish after on 33 secondes, I thinked that i have a problem somewhere ...
+I double-checked everything and finally admitted that something I had been waiting for so many hours behind the computer screen, today, only took half a minute to be finished on my less powerful computer (a simple Chromebook). 
+
+I litle shocked, I have decided to invest few day of work to code the interface as I was imagine it 25 years ago.
+
+By the way, I would like to thank the guys who coded "ncurses" that simplify a lot the development of this last part.
+
+I post the result on GitHub considering subject is now closed on my side, but if someone could make something else with that I will be happy to reply question.
+
+Happy hack !
+
+
+

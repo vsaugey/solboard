@@ -1,0 +1,14 @@
+To build the project ensure you have a proper C compilator and cmake installed.
+The libncurses-dep package must also be installed to compile the game.
+
+After these check, in the directory you extract files :
+
+#cmake .
+
+That will create makefile for your distribution or system, and :
+
+#make
+
+That will compile the executable.
+
+Before launch the game "solboard" please launch generate-board-files executable

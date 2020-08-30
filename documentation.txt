@@ -1,0 +1,42 @@
+Hi,
+
+This small document explaining how working the generator of the wining Board.
+
+To be able to provide information that the player could still win the game, the generate-board-files executable will compute all the possible position to win a game and store it in two separate files.
+By default the program will compute only winning board for game that finish the a pawn in central position, but you can adapt it to compute for other end.
+
+Technically, the programme will start from the final positions and play in reverse to fill the board.
+Everytime the program find a unknow board, it will be add to two lists that store all winning boards.
+The first containing the boards with a pawn at central position and the other one without.
+
+The design coming from the encoding of the board and to safe memory by using only 32 bits to store the other pawn.
+You could consider that the board is encoded with a very uncommon way.
+Sorry for that, it make program very complex to understand but this encoding method also permit to compute very fast rotation and axial symetry of the board.
+That is permit to optimize number of computation by cutting the branch of the resolution tree when a symetric or equivalent by rotation board is found.
+
+The boards are store on 32 bits variable (sorry 64 bits computer was not available at the time I started this program).
+
+Every pawn presence in the board are significated by a bit. 
+
+**********************
+****** 02 03 08 ******
+****** 01 04 07 ******
+*16 15 14 05 06 25 26*
+*11 12 13 XX 29 28 27*
+*10 09 22 21 30 31 32*
+****** 23 20 17 ******
+****** 24 19 18 ******
+**********************
+
+They are 76 differents possible moves on the board.
+This move are precoded in some tabs initialized by inittab function in libsolitaire librairie.
+
+    -cache is the mask of three bit to store position of the pawn involved in the move.
+    -result is the position of the pawn after the move
+    -coup is the position of the pawn before the move
+    -pawn indicate the position of the pawn that will move (this one is only used in the interface program)
+
+The first 12 move envolved the pawn in the middle of the board (cache will have only two bits flags).
+The others one are fully coded with in the 32 bits structure (cache will have 3 bits flags)
+
+After this done find an avaible move of apply it to the board become just a bit operation.  

@@ -1,0 +1,11 @@
+By using the program, I discovered many funny fact.
+
+For exemple, if you start by removing the central pawn, you cannot finish with one pawn on one of this position :
+
+xx   xx
+xx***xx
+ ***** 
+ ** ** 
+ ***** 
+xx***xx
+xx   xx
