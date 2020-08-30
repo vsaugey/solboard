@@ -101,7 +101,7 @@ void readfile(list li, char * fileName) {
 
   FILE * f=fopen(fileName,"rb");
 
-  if (f == NULL) { printf("%s not found, please run 'generate-boards-files' exec to generate winning board files"); exit (-1); }
+  if (f == NULL) { printf("%s not found, please run 'generate-boards-files' exec to generate winning board files", fileName); exit (-1); }
 
   fread(&p,4,1,f);
   while (!feof(f)) { list_add(li,p); fread(&p,4,1,f); }
@@ -223,6 +223,9 @@ W[1]=list_init();
 char game [33];
 int depth=-1;
 
+readfile (W[0], SAUVES);
+readfile (W[1], SAUVEA);
+
 initscr();
 keypad(stdscr, TRUE);
 noecho();
@@ -234,9 +237,6 @@ int x=3,y=3;
 int sel_x=-1,sel_y=-1;
 board = subwin(stdscr, 7, 7, LINES / 2 - 4, COLS / 2 - 4);
 show_board (board, b, middle, pawn_grab_move, sel_x, sel_y);
-
-readfile (W[0], SAUVES);
-readfile (W[1], SAUVEA);
 
 clear_move(pawn_grab_move);
 mvprintw(0,0,"Press 'q' to quit and 'u' to undo a move"); 
